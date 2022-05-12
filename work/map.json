@@ -882,6 +882,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-1"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -920,6 +925,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-2"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -958,6 +968,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-3"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -996,6 +1011,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-4"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1034,6 +1054,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-5"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1072,6 +1097,11 @@
                  "name":"openWebsiteTriggerMessage",
                  "type":"string",
                  "value":"Press on SPACE to open the group workplace"
+                }, 
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"contiki-6"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1492,7 +1522,73 @@
          "draworder":"topdown",
          "id":48,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":192,
+                 "id":16,
+                 "name":"contiki-1",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":128,
+                 "y":960
+                }, 
+                {
+                 "height":192,
+                 "id":17,
+                 "name":"contiki-2",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":320,
+                 "y":960
+                }, 
+                {
+                 "height":192,
+                 "id":18,
+                 "name":"contiki-3",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":512,
+                 "y":960
+                }, 
+                {
+                 "height":192,
+                 "id":19,
+                 "name":"contiki-4",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":704,
+                 "y":960
+                }, 
+                {
+                 "height":192,
+                 "id":20,
+                 "name":"contiki-5",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":896,
+                 "y":960
+                }, 
+                {
+                 "height":192,
+                 "id":21,
+                 "name":"contiki-6",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":192,
+                 "x":1088,
+                 "y":960
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1517,8 +1613,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":93,
- "nextobjectid":1,
+ "nextlayerid":98,
+ "nextobjectid":22,
  "orientation":"orthogonal",
  "properties":[
         {
