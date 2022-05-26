@@ -1,4 +1,6 @@
 var rc3MapEnabled = false;
+var popups = [];
+var popupNumber = 0;
 
 function enableRc3Map() {
     rc3MapEnabled = true;
@@ -26,7 +28,7 @@ function contiki(nr) {
     let XHR = null;
     
     function displayComponents(nr, components) {
-        WA.ui.openPopup(
+        popups[popupNumber] = WA.ui.openPopup(
             'contiki-' + nr,
             'Workplace ' + nr + '\n' + components,
             [{
@@ -37,6 +39,7 @@ function contiki(nr) {
                 }
             }]
         );
+        popupNumber++;
     }
     
     try {
@@ -83,4 +86,37 @@ WA.room.onEnterZone('contiki-5', () => {
 
 WA.room.onEnterZone('contiki-6', () => {
     contiki(6);
+});
+
+function cleanup() {
+  for (let i = 0; i < popupNumber; i++) {
+      if (popups[i]) {
+          popups[i].close();
+          popups[i] = null;
+      }
+  }
+}
+
+WA.room.onLeaveZone('contiki-1', () => {
+    cleanup();
+});
+
+WA.room.onLeaveZone('contiki-2', () => {
+    cleanup();
+});
+
+WA.room.onLeaveZone('contiki-3', () => {
+    cleanup();
+});
+
+WA.room.onLeaveZone('contiki-4', () => {
+    cleanup();
+});
+
+WA.room.onLeaveZone('contiki-5', () => {
+    cleanup();
+});
+
+WA.room.onLeaveZone('contiki-6', () => {
+    cleanup();
 });
