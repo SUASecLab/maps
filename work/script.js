@@ -1,6 +1,7 @@
 var rc3MapEnabled = false;
 var popups = [];
 var popupNumber = 0;
+let adminHintShown = false;
 
 function enableRc3Map() {
     rc3MapEnabled = true;
@@ -27,6 +28,14 @@ function contiki(nr) {
     let components = 'Could not fetch components';
     let XHR = null;
     
+    /* Show hint for changing components to admins */
+    if ((WA.player.tags.includes("admin")) && (!adminHintShown)) {
+        adminHintShown = true;
+        WA.chat.sendChatMessage("You can change the displayed components here:", "Components")
+        WA.chat.sendChatMessage("https://" + window.location.hostname + "/components/edit/?uuid=" + WA.player.id, "Components")
+        WA.chat.sendChatMessage("Do not forget to select the correct table number", "Components")
+    }
+
     function displayComponents(nr, components) {
         popups[popupNumber] = WA.ui.openPopup(
             'contiki-' + nr,
@@ -49,7 +58,7 @@ function contiki(nr) {
     }
     
     if (XHR) {
-        XHR.open('GET', '/components/nr/' + nr, true);
+        XHR.open('GET', '/components/nr/' + nr + "?uuid=" + WA.player.id, true);
         XHR.onreadystatechange = function() {
             if (XHR.readyState == 4 && this.status == 200) {
                 components =  XHR.responseText;
