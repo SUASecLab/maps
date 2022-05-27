@@ -32,7 +32,7 @@ function contiki(nr) {
     if ((WA.player.tags.includes("admin")) && (!adminHintShown)) {
         adminHintShown = true;
         WA.chat.sendChatMessage("You can change the displayed components here:", "Components")
-        WA.chat.sendChatMessage("https://" + window.location.hostname + "/components/edit/?uuid=" + WA.player.id, "Components")
+        WA.chat.sendChatMessage("https://lab.itsec.hs-sm.de/components/edit/?uuid=" + WA.player.id, "Components")
         WA.chat.sendChatMessage("Do not forget to select the correct table number", "Components")
     }
 
