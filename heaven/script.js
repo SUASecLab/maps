@@ -1,7 +1,3 @@
-var rc3MapEnabled = false;
-var popups = [];
-var popupNumber = 0;
-let adminHintShown = false;
 var coWebsite;
 var triggerMessage;
 
@@ -11,78 +7,6 @@ function cleanup() {
     }
     if (coWebsite) {
         coWebsite.close();
-    }
-    for (let i = 0; i < popupNumber; i++) {
-        if (popups[i]) {
-            popups[i].close();
-            popups[i] = null;
-        }
-    }
-}
-
-function enableRc3Map() {
-    rc3MapEnabled = true;
-}
-
-WA.onInit().then(() => {
-    const date = new Date();
-    const month = date.getMonth();
-    const day = date.getDate();
-    if ((month === 11) &&
-        (27 <= day) &&
-        (day <= 30)) {
-        enableRc3Map();
-    }
-});
-
-WA.room.onEnterLayer('rc3').subscribe(() => {
-    if (rc3MapEnabled) {
-        WA.nav.goToRoom("/@/org/lab.itsec.hs-sm.de/rc3");
-    }
-});
-
-function components(nr) {
-    let components = 'Could not fetch components';
-    let XHR = null;
-    
-    /* Show hint for changing components to admins */
-    if ((WA.player.tags.includes("admin")) && (!adminHintShown)) {
-        adminHintShown = true;
-        WA.chat.sendChatMessage("You can change the displayed components here:", "Components")
-        WA.chat.sendChatMessage("https://lab.itsec.hs-sm.de/components/edit/?token=" + WA.player.userRoomToken, "Components")
-        WA.chat.sendChatMessage("Do not forget to select the correct table number", "Components")
-    }
-
-    function displayComponents(nr, components) {
-        popups[popupNumber] = WA.ui.openPopup(
-            'contiki-' + nr,
-            'Workplace ' + nr + '\n' + components,
-            [{
-                label: "Close",
-                className: "primary",
-                callback: (popup) => {
-                    popup.close();
-                }
-            }]
-        );
-        popupNumber++;
-    }
-    
-    try {
-        XHR = new XMLHttpRequest();
-    } catch(e) {
-         console.error('Could not generate XHR');
-    }
-    
-    if (XHR) {
-        XHR.open('GET', '/components/nr/' + nr + "?token=" + WA.player.userRoomToken, true);
-        XHR.onreadystatechange = function() {
-            if (XHR.readyState == 4 && this.status == 200) {
-                components =  XHR.responseText;
-                displayComponents(nr, components);
-            }
-        }
-        XHR.send(null);
     }
 }
 
@@ -110,7 +34,7 @@ function multiUser(nr) {
                         const token =  XHR.responseText;
                         
                         setTimeout(async function() {
-                            coWebsite = await WA.nav.openCoWebSite("/assigner/contiki-" + nr + "?token=" + token,
+                            coWebsite = await WA.nav.openCoWebSite("/assigner/heaven-" + nr + "?token=" + token,
                                                                    false,
                                                                    "microphone *; camera *;fullscreen"
                             );
@@ -147,7 +71,7 @@ function singleUser(nr) {
                         const password =  XHR.responseText;
                         
                         setTimeout(async function() {
-                            coWebsite = await WA.nav.openCoWebSite("/websockify/vnc.html?path=websockify/cooja-" + nr + "&autoconnect=true&resize=scale&password=" + password,
+                            coWebsite = await WA.nav.openCoWebSite("/websockify/vnc.html?path=websockify/heaven-" + nr + "&autoconnect=true&resize=scale&password=" + password,
                                                                    false,
                                                                    "fullscreen"
                             );
@@ -162,59 +86,30 @@ function singleUser(nr) {
 
 // Multi User Enter
 
-WA.room.onEnterLayer('workgroup_1').subscribe(() => {
-    components(1);
+WA.room.onEnterLayer('multi_user_1').subscribe(() => {
     multiUser(1);
 });
 
-WA.room.onEnterLayer('workgroup_2').subscribe(() => {
-    components(2);
+WA.room.onEnterLayer('multi_user_2').subscribe(() => {
     multiUser(2);
 });
 
-WA.room.onEnterLayer('workgroup_3').subscribe(() => {
-    components(3);
+WA.room.onEnterLayer('multi_user_3').subscribe(() => {
     multiUser(3);
 });
 
-WA.room.onEnterLayer('workgroup_4').subscribe(() => {
-    components(4);
-    multiUser(4);
-});
-
-WA.room.onEnterLayer('workgroup_5').subscribe(() => {
-    components(5);
-    multiUser(5);
-});
-
-WA.room.onEnterLayer('workgroup_6').subscribe(() => {
-    components(6);
-    multiUser(6);
-});
 
 // Multi User Leave
 
-WA.room.onLeaveLayer('workgroup_1').subscribe(() => {
+WA.room.onLeaveLayer('multi_user_1').subscribe(() => {
     cleanup();
 });
 
-WA.room.onLeaveLayer('workgroup_2').subscribe(() => {
+WA.room.onLeaveLayer('multi_user_1').subscribe(() => {
     cleanup();
 });
 
-WA.room.onLeaveLayer('workgroup_3').subscribe(() => {
-    cleanup();
-});
-
-WA.room.onLeaveLayer('workgroup_4').subscribe(() => {
-    cleanup();
-});
-
-WA.room.onLeaveLayer('workgroup_5').subscribe(() => {
-    cleanup();
-});
-
-WA.room.onLeaveLayer('workgroup_6').subscribe(() => {
+WA.room.onLeaveLayer('multi_user_1').subscribe(() => {
     cleanup();
 });
 
@@ -308,6 +203,10 @@ WA.room.onEnterLayer('single_user_22').subscribe(() => {
     singleUser(22);
 });
 
+WA.room.onEnterLayer('single_user_23').subscribe(() => {
+    singleUser(23);
+});
+
 // Single User Leave
 
 WA.room.onLeaveLayer('single_user_1').subscribe(() => {
@@ -395,5 +294,9 @@ WA.room.onLeaveLayer('single_user_21').subscribe(() => {
 });
 
 WA.room.onLeaveLayer('single_user_22').subscribe(() => {
+    cleanup();
+});
+
+WA.room.onLeaveLayer('single_user_23').subscribe(() => {
     cleanup();
 });

@@ -288,22 +288,6 @@
          "id":127,
          "name":"lecture",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"bbbRoom",
-                 "type":"string",
-                 "value":"gil-lecture"
-                }, 
-                {
-                 "name":"bbbTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"bbbTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to enter the lecture"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":40,
@@ -368,7 +352,34 @@
          "draworder":"topdown",
          "id":48,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":832,
+                 "id":1,
+                 "name":"lecture",
+                 "properties":[
+                        {
+                         "name":"bbbMeeting",
+                         "type":"string",
+                         "value":"b301ba1e-8069-4a17-86ca-64d92da2bc6f"
+                        }, 
+                        {
+                         "name":"bbbMeetingAdminTag",
+                         "type":"string",
+                         "value":"speaker"
+                        }, 
+                        {
+                         "name":"meetingName",
+                         "type":"string",
+                         "value":"lecture"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":512,
+                 "x":32,
+                 "y":64
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -394,7 +405,7 @@
          "y":0
         }],
  "nextlayerid":138,
- "nextobjectid":1,
+ "nextobjectid":2,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

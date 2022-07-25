@@ -118,12 +118,6 @@
          "id":3,
          "name":"fahrplan",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"zone",
-                 "type":"string",
-                 "value":"fahrplan"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,

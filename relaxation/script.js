@@ -1,17 +1,21 @@
 let cinemaHintsShown = false;
 var currentVideoLink;
 var intervalId;
+var coWebsite;
+var triggerMessage;
 
-WA.room.onEnterZone('cinema', function() {
+// Cinema feature
+
+WA.room.onEnterLayer('cinema').subscribe(() => {
     if (!cinemaHintsShown) {
         WA.chat.sendChatMessage("Change video: /video <Video Link>", "Cinema");
         WA.chat.sendChatMessage("Link format: https://www.youtube.com/watch?v=Video-ID", "Cinema");
         cinemaHintsShown = true;
     }
     
-    getVideoLink(function(link) {
+    getVideoLink(async function(link) {
         if (link) {
-            WA.nav.openCoWebSite(link);
+            coWebsite = await WA.nav.openCoWebSite(link);
             currentVideoLink = link;
         }
         intervalId = setInterval(function() {
@@ -19,10 +23,12 @@ WA.room.onEnterZone('cinema', function() {
                 if (newLink) {
                     if (newLink != currentVideoLink) {
                         currentVideoLink = newLink;
-                        WA.nav.closeCoWebSite();
-                        setTimeout(function() {
-                            WA.nav.openCoWebSite(currentVideoLink);
-                        }, 2000);
+                        if (coWebsite) {
+                            coWebsite.close();
+                        }
+                        setTimeout(async function() {
+                            coWebsite = await WA.nav.openCoWebSite(currentVideoLink);
+                        }, 250);
                     }
                 }
             });
@@ -30,8 +36,10 @@ WA.room.onEnterZone('cinema', function() {
     });
 });
 
-WA.room.onLeaveZone('cinema', function() {
-    WA.nav.closeCoWebSite();
+WA.room.onLeaveLayer('cinema').subscribe(() => {
+    if (coWebsite) {
+        coWebsite.close();
+    }
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
@@ -54,7 +62,7 @@ WA.chat.onChatMessage((message => {
             }
     
             if (XHR) {
-                XHR.open('GET', '/cinema/?url=' + input[1] + "&uuid=" + WA.player.id, true);
+                XHR.open('GET', '/cinema/?url=' + input[1] + "&token=" + WA.player.userRoomToken, true);
                 XHR.onreadystatechange = function() {
                     if (XHR.readyState == 4 && this.status == 200) {
                         let response = XHR.responseText;
@@ -77,7 +85,7 @@ function getVideoLink(myCallback) {
     }
     
     if (XHR) {
-        XHR.open('GET', '/cinema/?uuid=' + WA.player.id, true);
+        XHR.open('GET', '/cinema/?token=' + WA.player.userRoomToken, true);
         XHR.onreadystatechange = function() {
             if (XHR.readyState == 4 && this.status == 200) {
                 myCallback(XHR.responseText);
@@ -90,3 +98,80 @@ function getVideoLink(myCallback) {
         myCallback(null);
     }
 }
+
+// Games
+
+function cleanup() {
+    if (triggerMessage) {
+        tiggerMessage.remove();
+    }
+    if (coWebsite) {
+        coWebsite.close();
+    }
+}
+
+function play(nr, message) {
+    if (triggerMessage) {
+        triggerMessage.remove();
+    }
+    triggerMessage = WA.ui.displayActionMessage({
+        message: message,
+        callback: () => {
+            if (coWebsite) {
+                coWebsite.close()
+            }
+            var XHR;
+            try {
+                XHR = new XMLHttpRequest();
+            } catch (e) {
+                console.error("Could not generate VNC password XHR");
+            }
+            
+            if (XHR) {
+                XHR.open("GET", "/extensions/getNoVNCPassword/?token=" + WA.player.userRoomToken, true);
+                XHR.onreadystatechange = function() {
+                    if (XHR.readyState == 4 && this.status == 200) {
+                        const password =  XHR.responseText;
+                        
+                        setTimeout(async function() {
+                            coWebsite = await WA.nav.openCoWebSite("/websockify/vnc.html?path=websockify/gaming-" + nr + "&autoconnect=true&resize=scale&password=" + password,
+                                                                   false,
+                                                                   "fullscreen"
+                            );
+                        }, 250);
+                    }
+                }
+                XHR.send(null);
+            }
+        },
+    });
+}
+
+// Games Enter
+
+WA.room.onEnterLayer('wanderlust').subscribe(() => {
+    play(1, "Press SPACE if you experience a light case of WANDERLUST");
+});
+
+WA.room.onEnterLayer('doukutsu').subscribe(() => {
+    play(2, "Press SPACE if you interested into a story about a cave");
+});
+
+WA.room.onEnterLayer('scummvm').subscribe(() => {
+    play(3, "When the name of chuck the plant is not a secret to you, then press SPACE");
+});
+
+
+// Games Leave
+
+WA.room.onLeaveLayer('wanderlust').subscribe(() => {
+    cleanup();
+});
+
+WA.room.onLeaveLayer('doukutsu').subscribe(() => {
+    cleanup();
+});
+
+WA.room.onLeaveLayer('scummvm').subscribe(() => {
+    cleanup();
+});

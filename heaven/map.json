@@ -33,32 +33,6 @@
          "id":98,
          "name":"single_user_1",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-1&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -71,32 +45,6 @@
          "id":99,
          "name":"single_user_2",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-2&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -109,32 +57,6 @@
          "id":100,
          "name":"single_user_3",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-3&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -147,32 +69,6 @@
          "id":101,
          "name":"single_user_4",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-4&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -185,32 +81,6 @@
          "id":102,
          "name":"single_user_5",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-5&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -223,32 +93,6 @@
          "id":103,
          "name":"single_user_6",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-6&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -261,32 +105,6 @@
          "id":104,
          "name":"single_user_7",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-7&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -299,32 +117,6 @@
          "id":105,
          "name":"single_user_8",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-8&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -337,32 +129,6 @@
          "id":106,
          "name":"single_user_9",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-9&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -375,32 +141,6 @@
          "id":107,
          "name":"single_user_10",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-10&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -413,32 +153,6 @@
          "id":108,
          "name":"single_user_11",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-11&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -451,32 +165,6 @@
          "id":109,
          "name":"single_user_12",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-12&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -489,32 +177,6 @@
          "id":110,
          "name":"single_user_13",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-13&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -527,32 +189,6 @@
          "id":111,
          "name":"single_user_14",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-14&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -565,32 +201,6 @@
          "id":112,
          "name":"single_user_15",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-15&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -603,32 +213,6 @@
          "id":113,
          "name":"single_user_16",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-16&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -641,32 +225,6 @@
          "id":114,
          "name":"single_user_17",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-17&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -679,32 +237,6 @@
          "id":115,
          "name":"single_user_18",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-18&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -717,32 +249,6 @@
          "id":116,
          "name":"single_user_19",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-19&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -755,32 +261,6 @@
          "id":117,
          "name":"single_user_20",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-20&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -793,32 +273,6 @@
          "id":118,
          "name":"single_user_21",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-21&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -831,32 +285,6 @@
          "id":119,
          "name":"single_user_22",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-22&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -869,32 +297,6 @@
          "id":120,
          "name":"single_user_23",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"authenticateNoVNC",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/websockify\/vnc.html?path=websockify\/heaven-23&autoconnect=true&resize=scale"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to open the workplace"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -908,31 +310,6 @@
          "name":"multi_user_1",
          "opacity":1,
          "properties":[
-                {
-                 "name":"authenticate",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/assigner\/heaven-1"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"microphone *; camera *;fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press on SPACE to open the group workplace"
-                }, 
                 {
                  "name":"silent",
                  "type":"bool",
@@ -952,31 +329,6 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"authenticate",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/assigner\/heaven-2"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"microphone *; camera *;fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press on SPACE to open the group workplace"
-                }, 
-                {
                  "name":"silent",
                  "type":"bool",
                  "value":true
@@ -994,31 +346,6 @@
          "name":"multi_user_3",
          "opacity":1,
          "properties":[
-                {
-                 "name":"authenticate",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"openWebsite",
-                 "type":"string",
-                 "value":"https:\/\/lab.itsec.hs-sm.de\/assigner\/heaven-3"
-                }, 
-                {
-                 "name":"openWebsitePolicy",
-                 "type":"string",
-                 "value":"microphone *; camera *;fullscreen"
-                }, 
-                {
-                 "name":"openWebsiteTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"openWebsiteTriggerMessage",
-                 "type":"string",
-                 "value":"Press on SPACE to open the group workplace"
-                }, 
                 {
                  "name":"silent",
                  "type":"bool",
@@ -1088,24 +415,8 @@
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 327, 327, 327, 327, 327, 327, 327, 327, 327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":36,
          "id":93,
-         "name":"bigbluebutton",
+         "name":"lecture_background",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"bbbRoom",
-                 "type":"string",
-                 "value":"heaven"
-                }, 
-                {
-                 "name":"bbbTrigger",
-                 "type":"string",
-                 "value":"onaction"
-                }, 
-                {
-                 "name":"bbbTriggerMessage",
-                 "type":"string",
-                 "value":"Press SPACE to enter the meeting room"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -1182,7 +493,34 @@
          "draworder":"topdown",
          "id":48,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":736,
+                 "id":1,
+                 "name":"lecture",
+                 "properties":[
+                        {
+                         "name":"bbbMeeting",
+                         "type":"string",
+                         "value":"7b1e7628-0467-478f-b647-806831c7fa9b"
+                        }, 
+                        {
+                         "name":"bbbMeetingAdminTag",
+                         "type":"string",
+                         "value":"speaker"
+                        }, 
+                        {
+                         "name":"meetingName",
+                         "type":"string",
+                         "value":"lecture"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":288,
+                 "x":544,
+                 "y":192
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -1208,8 +546,14 @@
          "y":0
         }],
  "nextlayerid":126,
- "nextobjectid":1,
+ "nextobjectid":2,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"script",
+         "type":"string",
+         "value":"script.js"
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.6.0",
  "tileheight":32,
