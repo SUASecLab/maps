@@ -844,33 +844,6 @@
                  "width":192,
                  "x":1088,
                  "y":960
-                }, 
-                {
-                 "height":768,
-                 "id":22,
-                 "name":"lecture",
-                 "properties":[
-                        {
-                         "name":"bbbMeeting",
-                         "type":"string",
-                         "value":"d2da8312-356b-4bc3-b543-4a674933d44e"
-                        }, 
-                        {
-                         "name":"bbbMeetingAdminTag",
-                         "type":"string",
-                         "value":"speaker"
-                        }, 
-                        {
-                         "name":"meetingName",
-                         "type":"string",
-                         "value":"lecture"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":416,
-                 "x":33,
-                 "y":64
                 }],
          "opacity":1,
          "type":"objectgroup",

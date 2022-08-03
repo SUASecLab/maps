@@ -352,34 +352,7 @@
          "draworder":"topdown",
          "id":48,
          "name":"floorLayer",
-         "objects":[
-                {
-                 "height":832,
-                 "id":1,
-                 "name":"lecture",
-                 "properties":[
-                        {
-                         "name":"bbbMeeting",
-                         "type":"string",
-                         "value":"b301ba1e-8069-4a17-86ca-64d92da2bc6f"
-                        }, 
-                        {
-                         "name":"bbbMeetingAdminTag",
-                         "type":"string",
-                         "value":"speaker"
-                        }, 
-                        {
-                         "name":"meetingName",
-                         "type":"string",
-                         "value":"lecture"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":512,
-                 "x":32,
-                 "y":64
-                }],
+         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -407,6 +380,12 @@
  "nextlayerid":138,
  "nextobjectid":2,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"script",
+         "type":"string",
+         "value":"script.js"
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.6.0",
  "tileheight":32,

@@ -1,3 +1,5 @@
+// script for the iot lab map
+
 var rc3MapEnabled = false;
 var popups = [];
 var popupNumber = 0;
@@ -41,6 +43,50 @@ WA.room.onEnterLayer('rc3').subscribe(() => {
     }
 });
 
+// lecture room
+WA.room.onEnterLayer('lecture').subscribe(() => {
+    if (triggerMessage) {
+        triggerMessage.remove();
+    }
+    triggerMessage = WA.ui.displayActionMessage({
+        message: "Press on SPACE to enter the lecture",
+        callback: () => {
+            if (coWebsite) {
+                coWebsite.close()
+            }
+            var XHR;
+            try {
+                XHR = new XMLHttpRequest();
+            } catch (e) {
+                console.error("Could not generate XHR");
+            }
+            
+            if (XHR) {
+                XHR.open('GET', '/extensions/bigbluebutton/?token=' + WA.player.userRoomToken +
+                            '&meetingName=lecture&meetingID=9c83a2ee-25e5-4770-9ebd-60cde920b0a6&userName=' +
+                            encodeURI(WA.player.name), true);
+                XHR.onreadystatechange = function() {
+                    if (XHR.readyState == 4 &&  this.status == 200) {
+                        let bbbJoinLink = XHR.responseText;
+                        
+                        setTimeout(async function() {
+                            coWebsite = await WA.nav.openCoWebSite(bbbJoinLink, false,
+                                    "microphone *; camera *; fullscreen; display-capture *; clipboard-read *; clipboard-write *;",
+                                    70, 0, true, false);
+                        }, 250);
+                    }
+                }
+                XHR.send(null);
+            }
+        },
+    });
+});
+
+WA.room.onLeaveLayer('lecture').subscribe(() => {
+    cleanup();
+});
+
+// functions for workplaces
 function components(nr) {
     let components = 'Could not fetch components';
     let XHR = null;
@@ -104,7 +150,7 @@ function multiUser(nr) {
             }
             
             if (XHR) {
-                XHR.open("GET", "/extensions/addNameToToken/?name=" + WA.player.name + "&token=" + WA.player.userRoomToken, true);
+                XHR.open("GET", "/extensions/addNameToToken/?name=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken, true);
                 XHR.onreadystatechange = function() {
                     if (XHR.readyState == 4 && this.status == 200) {
                         const token =  XHR.responseText;
