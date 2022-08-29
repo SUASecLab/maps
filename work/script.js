@@ -133,38 +133,16 @@ function components(nr) {
 }
 
 function multiUser(nr) {
-    if (triggerMessage) {
-        triggerMessage.remove();
-    }
+    cleanup();
     triggerMessage = WA.ui.displayActionMessage({
         message: "Press on SPACE to open the group workplace",
         callback: () => {
-            if (coWebsite) {
-                coWebsite.close()
-            }
-            var XHR;
-            try {
-                XHR = new XMLHttpRequest();
-            } catch (e) {
-                console.error("Could not generate token extension XHR");
-            }
-            
-            if (XHR) {
-                XHR.open("GET", "/extensions/addNameToToken/?name=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken, true);
-                XHR.onreadystatechange = function() {
-                    if (XHR.readyState == 4 && this.status == 200) {
-                        const token =  XHR.responseText;
-                        
-                        setTimeout(async function() {
-                            coWebsite = await WA.nav.openCoWebSite("/assigner/contiki-" + nr + "?token=" + token,
-                                                                   false,
-                                                                   "microphone *; camera *;fullscreen"
-                            );
-                        },  250);
-                    }
-                }
-                XHR.send(null);
-            }
+            setTimeout(async function() {
+                coWebsite = await WA.nav.openCoWebSite("/assigner/contiki-" + nr + "?token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name),
+                                                        false,
+                                                        "microphone *; camera *;fullscreen"
+                );
+            },  250);
         },
     });
 }

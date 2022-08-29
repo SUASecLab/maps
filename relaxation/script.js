@@ -37,9 +37,7 @@ WA.room.onEnterLayer('cinema').subscribe(() => {
 });
 
 WA.room.onLeaveLayer('cinema').subscribe(() => {
-    if (coWebsite) {
-        coWebsite.close();
-    }
+    cleanup();
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
@@ -103,7 +101,7 @@ function getVideoLink(myCallback) {
 
 function cleanup() {
     if (triggerMessage) {
-        tiggerMessage.remove();
+        triggerMessage.remove();
     }
     if (coWebsite) {
         coWebsite.close();
@@ -111,15 +109,10 @@ function cleanup() {
 }
 
 function play(nr, message) {
-    if (triggerMessage) {
-        triggerMessage.remove();
-    }
+    cleanup();
     triggerMessage = WA.ui.displayActionMessage({
         message: message,
         callback: () => {
-            if (coWebsite) {
-                coWebsite.close()
-            }
             var XHR;
             try {
                 XHR = new XMLHttpRequest();
