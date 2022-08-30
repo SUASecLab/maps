@@ -13,7 +13,7 @@ define(`BBB', `dnl
 triggerMessage = USER_CONFIRMATION(`"Press on SPACE to enter the lecture"',
         `() => {
             XHR(`GET', `"/extensions/bigbluebutton/?token=" + WA.player.userRoomToken +
-                    "&meetingName=lecture&meetingID=0c7e6c16-bb49-45c3-b567-e3ed2945a7ab&userName=" +
+                    "&meetingName=lecture&meetingID=$1&userName=" +
                     encodeURI(WA.player.name)',
             `function() {
                     if (`XHR'.readyState == 4 &&  this.status == 200) {
