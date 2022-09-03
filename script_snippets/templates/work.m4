@@ -1,5 +1,6 @@
 dnl Generates the script for the internet of things laboratory
 dnl
+include(`script_snippets/api/init.m4')dnl
 include(`script_snippets/api/nav.m4')dnl
 include(`script_snippets/api/room.m4')dnl
 include(`script_snippets/api/ui.m4')dnl
@@ -7,6 +8,7 @@ include(`script_snippets/composite/forloop2.m4')dnl
 include(`script_snippets/util/bbb.m4')dnl
 include(`script_snippets/util/workplaces.m4')dnl
 include(`script_snippets/util/cleanup.m4')dnl
+include(`script_snippets/util/tips.m4')dnl
 dnl
 var rc3MapEnabled = false;
 var popups = [];
@@ -27,8 +29,7 @@ function enableRc3Map() {
     rc3MapEnabled = true;
 }
 
-WA.onInit().then(() => {
-    const date = new Date();
+INIT(`const date = new Date();
     const month = date.getMonth();
     const day = date.getDate();
     if ((month === 11) &&
@@ -36,14 +37,26 @@ WA.onInit().then(() => {
         (day <= 30)) {
         enableRc3Map();
     }
-});
+dnl
+dnl Show tips in menu
+    ADD_TIPS_TO_MENU
+dnl Open tips in iframe
+    triggerMessage = USER_CONFIRMATION(`"Press on SPACE to show tips"',
+        `() => {
+            TIMEOUT(`async function() {
+                coWebsite = OPEN_COWEBSITE(`TIPS_LOCATION')
+            }', `250')
+        }')')
 
+dnl Cleanup when leaving start
+LEAVE_LAYER(`start', `cleanup();')
+    
 ENTER_LAYER(`rc3', `
     if (rc3MapEnabled) {
         WA.nav.goToRoom("/@/org/lab.itsec.hs-sm.de/rc3");
     }')
 
-// lecture room
+dnl lecture room
 ENTER_LAYER(`lecture', `
 dnl Cleanup open trigger messages and cowebsites
     cleanup();
@@ -53,7 +66,7 @@ dnl Detect if the users leaves BigBlueButton
 LEAVE_LAYER(`lecture', `
     cleanup();')
 
-// functions for workplaces
+dnl functions for workplaces
 function components(nr) {
     let components = "Could not fetch components";
     

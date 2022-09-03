@@ -1,8 +1,10 @@
 dnl Generates the script for the graphics interaction laboratory
 dnl
+include(`script_snippets/api/init.m4')dnl
 include(`script_snippets/api/room.m4')dnl
 include(`script_snippets/util/bbb.m4')dnl
 include(`script_snippets/util/cleanup.m4')dnl
+include(`script_snippets/util/tips.m4')dnl
 dnl
 dnl coWebsite = CoWebsite variable, needed for cleanup operation
 dnl triggerMesage = TriggerMessage variable, needed for cleanup operation
@@ -11,6 +13,9 @@ var coWebsite;
 var triggerMessage;
 
 CLEANUP
+
+dnl Add show tips functionality to menu
+INIT(`ADD_TIPS_TO_MENU')
 
 dnl Detect if the user enters BigBlueButton
 ENTER_LAYER(`lecture', `

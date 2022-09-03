@@ -1,5 +1,6 @@
 dnl Generates the script for the relaxation area
 dnl
+include(`script_snippets/api/init.m4')dnl
 include(`script_snippets/composite/foreach.m4')dnl
 include(`script_snippets/api/nav.m4')dnl
 include(`script_snippets/api/room.m4')dnl
@@ -8,6 +9,7 @@ include(`script_snippets/js/timeout.m4')dnl
 include(`script_snippets/js/xhr.m4')dnl
 include(`script_snippets/util/cleanup.m4')dnl
 include(`script_snippets/util/workplaces.m4')dnl
+include(`script_snippets/util/tips.m4')dnl
 dnl
 let cinemaHintsShown = false;
 var currentVideoLink;
@@ -19,7 +21,10 @@ var triggerMessage;
 
 CLEANUP
 
-dnl Cinema
+dnl Add show tips functionality to menu
+INIT(`ADD_TIPS_TO_MENU')
+
+dnl Cinema functionality
 
 ENTER_LAYER(`cinema', `
     if (!cinemaHintsShown) {
