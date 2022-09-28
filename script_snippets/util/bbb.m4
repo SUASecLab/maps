@@ -10,20 +10,22 @@ dnl Parameters
 dnl $1 meetingID
 dnl $2 coWebsiteName
 define(`BBB', `dnl
-triggerMessage = USER_CONFIRMATION(`"Press on SPACE to enter the lecture"',
-        `() => {
-            XHR(`GET', `"/extensions/bigbluebutton/?token=" + WA.player.userRoomToken +
-                    "&meetingName=lecture&meetingID=$1&userName=" +
-                    encodeURI(WA.player.name)',
-            `function() {
-                    if (`XHR'.readyState == 4 &&  this.status == 200) {
-                        let bbbJoinLink = `XHR'.responseText;
+if (!(WA.player.tags.includes("exam"))) {
+    triggerMessage = USER_CONFIRMATION(`"Press on SPACE to enter the lecture"',
+            `() => {
+                XHR(`GET', `"/extensions/bigbluebutton/?token=" + WA.player.userRoomToken +
+                        "&meetingName=lecture&meetingID=$1&userName=" +
+                        encodeURI(WA.player.name)',
+                `function() {
+                        if (`XHR'.readyState == 4 &&  this.status == 200) {
+                            let bbbJoinLink = `XHR'.responseText;
 
-                        TIMEOUT(`async function() {
-                            $2 = OPEN_COWEBSITE(bbbJoinLink, false,
-                                        "microphone *; camera *; fullscreen; display-capture *; clipboard-read *; clipboard-write *;",
-                                    70, 0, true, false)
-                        }', `250')
-                    }
-                }')
-        }')')dnl
+                            TIMEOUT(`async function() {
+                                $2 = OPEN_COWEBSITE(bbbJoinLink, false,
+                                            "microphone *; camera *; fullscreen; display-capture *; clipboard-read *; clipboard-write *;",
+                                        70, 0, true, false)
+                            }', `250')
+                        }
+                    }')
+            }')
+        }')dnl

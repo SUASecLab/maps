@@ -20,6 +20,13 @@ CLEANUP
 dnl Add show tips functionality to menu
 INIT(`ADD_TIPS_TO_MENU')
 
+dnl Only change maps if exam mode is not enabled
+ENTER_LAYER(`gil', `dnl
+    CHANGE_MAP(`"/@/org/lab.itsec.hs-sm.de/gil"')')
+
+ENTER_LAYER(`laboratory', `dnl
+    CHANGE_MAP(`"/@/org/lab.itsec.hs-sm.de/laboratory"')')
+
 ENTER_LAYER(`lecture', `
 dnl Cleanup open trigger messages and cowebsites
     cleanup();

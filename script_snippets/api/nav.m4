@@ -34,3 +34,16 @@ ifelse(eval(len($1) > 0), 1, `
     `errprint(__program__:__file__:__line__: Error: Call to openTab without handing over URL)
 m4exit(`1')')dnl
 ')dnl
+dnl
+dnl
+dnl Change map with respect to exam mode:
+dnl Map is only changed if the user does not have the exam tag
+dnl
+dnl Parameters:
+dnl $1 Map name
+dnl
+define(`CHANGE_MAP', `dnl
+if (!(WA.player.tags.includes("exam"))) {
+    WA.nav.goToRoom($1);
+}
+')dnl

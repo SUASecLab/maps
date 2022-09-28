@@ -375,12 +375,6 @@
          "id":96,
          "name":"laboratory",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"exitUrl",
-                 "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/laboratory"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
@@ -441,12 +435,6 @@
          "id":125,
          "name":"gil",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"exitUrl",
-                 "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/gil"
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":32,
