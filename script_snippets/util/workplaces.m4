@@ -7,12 +7,17 @@ include(`script_snippets/js/xhr.m4')dnl
 dnl
 dnl Multi-user workplace
 dnl
-define(`MULTI_USER', `function multiUser(machine) {
+define(`MULTI_USER', `function multiUser(machine, machine2) {
     cleanup();
     triggerMessage = USER_CONFIRMATION(`"Press on SPACE to open the group workplace"',
         `() => {
             TIMEOUT(`async function() {
-                coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"')
+                if (machine2) {
+                    coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?vm2=" + machine2 + "&token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"', 75)
+                }
+                else {
+                    coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"')
+                }
             }',  `250')
         }')
 }')dnl

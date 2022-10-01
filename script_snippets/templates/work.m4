@@ -67,7 +67,7 @@ LEAVE_LAYER(`lecture', `
     cleanup();')
 
 dnl functions for workplaces
-function components(nr) {
+function components(wpNr, nr, nr2) {
     let components = "Could not fetch components";
     
     /* Show hint for changing components to admins */
@@ -81,7 +81,7 @@ function components(nr) {
     function displayComponents(nr, components) {
         popups[popupNumber] = WA.ui.openPopup(
             "contiki-" + nr,
-            "Workplace " + nr + '\n' + components,
+            "Workgroup " + nr + "\n-----\n" + components,
             [{
                 label: "Close",
                 className: "primary",
@@ -95,8 +95,29 @@ function components(nr) {
     
     XHR(`GET', `"/components/nr/" + nr + "?token=" + WA.player.userRoomToken', `function() {
             if (`XHR'.readyState == 4 && this.status == 200) {
-                components =  `XHR'.responseText;
-                displayComponents(nr, components);
+                components = `XHR'.responseText;
+                if (nr2) {
+                    var `XHR2';
+                    try {
+                        `XHR2' = new XMLHttpRequest();
+                    } catch (e) {
+                        console.error("Could not generate `XHR2'");
+                    }
+                    
+                    if (`XHR2') {
+                        `XHR2'.open("GET", "/components/nr/" + nr2 + "?token=" + WA.player.userRoomToken, true);
+                        `XHR2'.onreadystatechange = function() {
+                            if (`XHR2'.readyState == 4 && this.status == 200) {
+                                components += "\n\-----\n";
+                                components += `XHR2'.responseText;
+                                displayComponents(wpNr, components);
+                            }
+                        }
+                        `XHR2'.send(null);
+                    }
+                } else {
+                    displayComponents(wpNr, components);
+                }
             }
         }')
 }
@@ -106,13 +127,24 @@ MULTI_USER
 SINGLE_USER
 
 dnl Generate multi-user enter functions
-forloop(`i', `1', `6', `ENTER_LAYER(`workgroup-i', `
-    components(i);
-    multiUser("contiki-i");')
+ENTER_LAYER(`workgroup-1', `
+    components(1, 1, 2);
+    multiUser("contiki-1", "contiki-2");
 ')
 
+ENTER_LAYER(`workgroup-2', `
+    components(2, 3, 4);
+    multiUser("contiki-3", "contiki-4");
+')
+
+ENTER_LAYER(`workgroup-3', `
+    components(3, 5, 6);
+    multiUser("contiki-5", "contiki-6");
+')
+
+
 dnl Generate multi-user leave functions
-forloop(`i', `1', `6', `LEAVE_LAYER(`workgroup-i', `
+forloop(`i', `1', `3', `LEAVE_LAYER(`workgroup-i', `
     cleanup();')
 ')
 
