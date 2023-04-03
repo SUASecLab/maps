@@ -1,8 +1,9 @@
 M4 := m4
 
-maps : $(GIL_DEPS) $(HEAVEN_DEPS) $(RC3_DEPS) \
-	$(RELAXATION_DEPS) $(WORK_DEPS)
+maps : $(GIL_DEPS) $(HEAVEN_DEPS) $(HACKING_DEPS) \
+	$(RC3_DEPS) $(RELAXATION_DEPS) $(WORK_DEPS)
 	@$(MAKE) $(GIL_TARGET)
+	@$(MAKE) $(HACKING_TARGET)
 	@$(MAKE) $(HEAVEN_TARGET)
 	@$(MAKE) $(RC3_TARGET)
 	@$(MAKE) $(RELAXATION_TARGET)
@@ -17,6 +18,20 @@ GIL_DEPS := script_snippets/api/room.m4 \
 
 $(GIL_TARGET) : $(GIL_DEPS)
 	$(M4) $(GIL_TEMPLATE) > $(GIL_TARGET)
+
+HACKING_TARGET := hacking/script.js
+HACKING_TEMPLATE := script_snippets/templates/hacking.m4
+HACKING_DEPS := script_snippets/api/init.m4 \
+	script_snippets/api/nav.m4 \
+	script_snippets/api/room.m4 \
+	script_snippets/api/ui.m4 \
+	script_snippets/composite/forloop2.m4 \
+	script_snippets/util/workplaces.m4 \
+	script_snippets/util/cleanup.m4 \
+	script_snippets/util/tips.m4 \
+	$(HACKING_TEMPLATE)
+$(HACKING_TARGET) : $(HACKING_DEPS)
+	$(M4) $(HACKING_TEMPLATE) > $(HACKING_TARGET)
 
 HEAVEN_TARGET := heaven/script.js
 HEAVEN_TEMPLATE := script_snippets/templates/heaven.m4
@@ -72,6 +87,6 @@ $(WORK_TARGET) : $(WORK_DEPS)
 .PHONY : clean
 
 clean :
-	$(RM) $(GIL_TARGET) $(HEAVEN_TARGET) \
-		$(RC3_TARGET) $(RELAXATION_TARGET) \
-		$(WORK_TARGET)
+	$(RM) $(GIL_TARGET) $(HACKING_TARGET) \
+		$(HEAVEN_TARGET) $(RC3_TARGET) \
+		$(RELAXATION_TARGET) $(WORK_TARGET)
