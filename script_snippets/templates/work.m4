@@ -53,7 +53,7 @@ LEAVE_LAYER(`start', `cleanup();')
     
 ENTER_LAYER(`rc3', `
     if (rc3MapEnabled) {
-        WA.nav.goToRoom("/@/org/lab.itsec.hs-sm.de/rc3");
+        WA.nav.goToRoom("/~/rc3.wam");
     }')
 
 dnl lecture room

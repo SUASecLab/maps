@@ -1411,7 +1411,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/laboratory"
+                 "value":"\/~\/laboratory.wam"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1711,7 +1711,7 @@
          "value":"script.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.0",
+ "tiledversion":"1.10.2",
  "tileheight":32,
  "tilesets":[
         {

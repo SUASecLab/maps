@@ -1543,7 +1543,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/heaven"
+                 "value":"\/~\/heaven.wam"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1603,7 +1603,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/hacking"
+                 "value":"\/~\/hacking.wam"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1663,7 +1663,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"\/@\/org\/lab.itsec.hs-sm.de\/relaxation"
+                 "value":"\/~\/relaxation.wam"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -2869,7 +2869,7 @@
          "value":"script.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.10.0",
+ "tiledversion":"1.10.2",
  "tileheight":32,
  "tilesets":[
         {
