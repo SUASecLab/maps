@@ -22,7 +22,7 @@ if (!(WA.player.tags.includes("exam"))) {
 
                             TIMEOUT(`async function() {
                                 $2 = OPEN_COWEBSITE(bbbJoinLink, false,
-                                            "microphone *; camera *; fullscreen; display-capture *; clipboard-read *; clipboard-write *;",
+                                            "microphone *; camera *; display-capture *; clipboard-read *; clipboard-write *; screen-wake-lock *; fullscreen *",
                                         70, 0, true, false)
                             }', `250')
                         }
