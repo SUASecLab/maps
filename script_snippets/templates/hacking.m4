@@ -10,23 +10,32 @@ include(`script_snippets/util/cleanup.m4')dnl
 include(`script_snippets/util/tips.m4')dnl
 dnl
 dnl coWebsite = CoWebsite variable, needed for cleanup operation
+dnl coWebsite2 = 2nd CoWebsite variable, also needed for cleanup
 dnl triggerMesage = TriggerMessage variable, needed for cleanup operation
 var coWebsite;
+var coWebsite2;
 var triggerMessage;
 
 CLEANUP
 
 dnl Add show tips functionality to menu
 INIT(`ADD_TIPS_TO_MENU')
-MULTI_USER
+SINGLE_USER
 
 dnl Generate multi user enter functions
 forloop(`i', `1', `21', `ENTER_LAYER(`user-i', `
-    multiUser("hacking-i");')
+    singleUser("hacking-i", "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);')
 ')
 
 dnl Generate multi-user leave functions
 forloop(`i', `1', `21', `LEAVE_LAYER(`user-i', `
-    cleanup();')
+    cleanup();
+    if (coWebsite2) {
+        coWebsite2.close();
+    }
+    if (coWebsite) {
+        coWebsite.close();
+    }
+    ')
 ')
 
