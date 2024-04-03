@@ -73,7 +73,7 @@ WA.chat.onChatMessage((message => {
         } else {
             XHR(`GET', `"/cinema/?url=" + input[1] + "&token=" + WA.player.userRoomToken',`
                 function() {
-                    if (`XHR'.readyState == 4 && this.status == 200) {
+                    if (`XHR'.readyState == 4) {
                         let response = `XHR'.responseText;
                         WA.chat.sendChatMessage(response, "Cinema");
                     }
