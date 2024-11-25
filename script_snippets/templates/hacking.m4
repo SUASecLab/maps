@@ -24,7 +24,11 @@ SINGLE_USER
 
 dnl Generate multi user enter functions
 forloop(`i', `1', `21', `ENTER_LAYER(`user-i', `
-    singleUser("hacking-i", "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);')
+    if (WA.player.tags.includes("hacking-ctf")) {
+    	singleUser(WA.player.id, "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);
+    } else {
+   		singleUser("hacking-i", "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);
+    }')
 ')
 
 dnl Generate multi-user leave functions
