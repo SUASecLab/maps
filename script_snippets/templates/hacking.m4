@@ -27,7 +27,7 @@ forloop(`i', `1', `21', `ENTER_LAYER(`user-i', `
     if (WA.player.tags.includes("hacking-ctf")) {
     	singleUser(WA.player.id, "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);
     } else {
-   		singleUser("hacking-i", "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);
+   		singleUser("hacking-i", "Press on SPACE to open the workplace");
     }')
 ')
 
