@@ -24,10 +24,8 @@ SINGLE_USER
 
 dnl Generate multi user enter functions
 forloop(`i', `1', `21', `ENTER_LAYER(`user-i', `
-    if (WA.player.tags.includes("hacking-ctf")) {
+    if (WA.player.tags.includes("hacking")) {
     	singleUser(WA.player.id, "Press on SPACE to open the workplace", "/ctf/?token=" + WA.player.userRoomToken);
-    } else {
-   		singleUser("hacking-i", "Press on SPACE to open the workplace");
     }')
 ')
 
