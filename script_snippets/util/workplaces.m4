@@ -40,9 +40,9 @@ define(`SINGLE_USER', `function singleUser(machine, confirmationMessage, secondW
                         TIMEOUT(`async function() {
                             if (secondWebsite) {
                                 coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `25', `1', `true')
-                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=websockify/" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
                             } else {
-                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=websockify/" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
                             }
                         }', `250')
                     }
