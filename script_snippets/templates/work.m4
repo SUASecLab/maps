@@ -124,8 +124,6 @@ function components(wpNr, nr, nr2) {
 
 MULTI_USER
 
-SINGLE_USER
-
 dnl Generate multi-user enter functions
 ENTER_LAYER(`workgroup-1', `
     components(1, 1, 2);
@@ -145,15 +143,5 @@ ENTER_LAYER(`workgroup-3', `
 
 dnl Generate multi-user leave functions
 forloop(`i', `1', `3', `LEAVE_LAYER(`workgroup-i', `
-    cleanup();')
-')
-
-dnl Generate single-user enter functions
-forloop(`i', `1', `22', `ENTER_LAYER(`singleuser-i', `
-    singleUser("cooja-i", `"Press on SPACE to open the workplace"');')
-')
-
-dnl Generate singe-user leave functions
-forloop(`i', `1', `22', `LEAVE_LAYER(`singleuser-i', `
     cleanup();')
 ')
