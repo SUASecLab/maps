@@ -14,6 +14,7 @@ dnl coWebsite2 = 2nd CoWebsite variable, also needed for cleanup
 dnl triggerMesage = TriggerMessage variable, needed for cleanup operation
 var coWebsite;
 var coWebsite2;
+var coWebsiteJitsi;
 var triggerMessage;
 
 CLEANUP

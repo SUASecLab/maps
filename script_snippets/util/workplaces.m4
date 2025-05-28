@@ -7,23 +7,23 @@ include(`script_snippets/js/xhr.m4')dnl
 dnl
 dnl Multi-user workplace
 dnl
-define(`MULTI_USER', `function multiUser(machine, machine2, secondWebsite) {
+define(`MULTI_USER', `function multiUser(machine, machine2) {
     cleanup();
     triggerMessage = USER_CONFIRMATION(`"Press on SPACE to open the group workplace"',
         `() => {
-            TIMEOUT(`async function() {
-                if (machine2) {
-                    coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?vm2=" + machine2 + "&token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"', 75)
+            XHR(`GET', `"/extensions/getNoVNCPassword/?token=" + WA.player.userRoomToken',`function() {
+                    if (`XHR'.readyState == 4 && this.status == 200) {
+                        const password =  `XHR'.responseText;
+
+                    TIMEOUT(`async function() {
+                        if (machine2) {
+                            coWebsite2 = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine2 + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
+                        }
+                        coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
+                        coWebsiteJitsi = OPEN_COWEBSITE(`"/extensions/jitsi/?roomName=" + machine + "&userName=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken', `false', `"fullscreen"', `75')
+                    }',  `250')
                 }
-                else {
-                    if (secondWebsite) {
-                        coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `25', `1', `true')
-                        coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"', `70', `2', `true')
-                    } else {
-                        coWebsite = OPEN_COWEBSITE(`"/assigner/" + machine + "?token=" + WA.player.userRoomToken + "&name=" + encodeURI(WA.player.name)', `false', `"microphone *; camera *; fullscreen"')
-                    }
-                }
-            }',  `250')
+            }')
         }')
 }')dnl
 dnl
@@ -39,11 +39,9 @@ define(`SINGLE_USER', `function singleUser(machine, confirmationMessage, secondW
                         
                         TIMEOUT(`async function() {
                             if (secondWebsite) {
-                                coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `25', `1', `true')
-                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
-                            } else {
-                                coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                                coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `75', `1', `true')
                             }
+                            coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
                         }', `250')
                     }
                 }')

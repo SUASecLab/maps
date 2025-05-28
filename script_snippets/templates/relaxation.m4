@@ -17,6 +17,8 @@ var intervalId;
 dnl coWebsite = CoWebsite variable, needed for cleanup operation
 dnl triggerMesage = TriggerMessage variable, needed for cleanup operation
 var coWebsite;
+var coWebsite2;
+var coWebsiteJitsi;
 var triggerMessage;
 
 CLEANUP

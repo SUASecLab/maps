@@ -11,8 +11,11 @@ include(`script_snippets/util/cleanup.m4')dnl
 include(`script_snippets/util/tips.m4')dnl
 dnl
 dnl coWebsite = CoWebsite variable, needed for cleanup operation
+dnl coWebsiteJitsi = Jitsi CoWebsite variable, needed for cleanup operation
 dnl triggerMesage = TriggerMessage variable, needed for cleanup operation
 var coWebsite;
+var coWebsite2;
+var coWebsiteJitsi;
 var triggerMessage;
 
 CLEANUP

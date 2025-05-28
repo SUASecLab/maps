@@ -15,6 +15,8 @@ var popups = [];
 var popupNumber = 0;
 let adminHintShown = false;
 var coWebsite;
+var coWebsite2;
+var coWebsiteJitsi;
 var triggerMessage;
 
 CLEANUP(`

@@ -9,5 +9,11 @@ define(`CLEANUP', `function cleanup() {
     if (coWebsite) {
         coWebsite.close();
     }
+    if (coWebsite2) {
+        coWebsite2.close();
+    }
+    if (coWebsiteJitsi) {
+        coWebsiteJitsi.close();
+    }
     $1
 }')dnl
