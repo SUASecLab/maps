@@ -17,10 +17,10 @@ define(`MULTI_USER', `function multiUser(machine, machine2) {
 
                     TIMEOUT(`async function() {
                         if (machine2) {
-                            coWebsite2 = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine2 + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
+                            coWebsite2 = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine2 + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `25')
                         }
-                        coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
-                        coWebsiteJitsi = OPEN_COWEBSITE(`"/extensions/jitsi/?roomName=" + machine + "&userName=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken', `false', `"fullscreen"', `75')
+                        coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `25')
+                        coWebsiteJitsi = OPEN_COWEBSITE(`"/extensions/jitsi/?roomName=" + machine + "&userName=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken', `false', `"fullscreen"', `25')
                     }',  `250')
                 }
             }')
@@ -39,9 +39,9 @@ define(`SINGLE_USER', `function singleUser(machine, confirmationMessage, secondW
                         
                         TIMEOUT(`async function() {
                             if (secondWebsite) {
-                                coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `75', `1', `true')
+                                coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `""', `25', `1', `true')
                             }
-                            coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `75')
+                            coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"', `25')
                         }', `250')
                     }
                 }')
