@@ -83,7 +83,7 @@ function components(wpNr, nr, nr2) {
     function displayComponents(nr, components) {
         popups[popupNumber] = WA.ui.openPopup(
             "contiki-" + nr,
-            "Workgroup " + nr + "\n-----\n" + components,
+            "Workgroup" + nr + ": " + components,
             [{
                 label: "Close",
                 className: "primary",
@@ -110,7 +110,7 @@ function components(wpNr, nr, nr2) {
                         `XHR2'.open("GET", "/components/nr/" + nr2 + "?token=" + WA.player.userRoomToken, true);
                         `XHR2'.onreadystatechange = function() {
                             if (`XHR2'.readyState == 4 && this.status == 200) {
-                                components += "\n\-----\n";
+                                components += "; ";
                                 components += `XHR2'.responseText;
                                 displayComponents(wpNr, components);
                             }
