@@ -16,9 +16,9 @@ define(`MULTI_USER', `function multiUser(machine, machine2) {
                         const password =  `XHR'.responseText;
 
                     TIMEOUT(`async function() {
-                        coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                        coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password + "&service=noVNC&token=" + WA.player.userRoomToken', `false', `"fullscreen"')
                         if (machine2) {
-                            coWebsite2 = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine2 + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                            coWebsite2 = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine2 + "&autoconnect=true&resize=scale&password=" + password + "&service=noVNC&token=" + WA.player.userRoomToken', `false', `"fullscreen"')
                         }
                         coWebsiteJitsi = OPEN_COWEBSITE(`"/extensions/jitsi/?roomName=" + machine + "&userName=" + encodeURI(WA.player.name) + "&token=" + WA.player.userRoomToken', `false', `"fullscreen"')
                     }',  `250')
@@ -41,7 +41,7 @@ define(`SINGLE_USER', `function singleUser(machine, confirmationMessage, secondW
                             if (secondWebsite) {
                                 coWebsite2 = OPEN_COWEBSITE(`secondWebsite', `false', `"fullscreen"')
                             }
-                            coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password', `false', `"fullscreen"')
+                            coWebsite = OPEN_COWEBSITE(`"/websockify/vnc.html?path=" + machine + "&autoconnect=true&resize=scale&password=" + password + "&service=noVNC&token=" + WA.player.userRoomToken', `false', `"fullscreen"')
                         }', `250')
                     }
                 }')
