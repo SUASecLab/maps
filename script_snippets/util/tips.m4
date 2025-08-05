@@ -1,7 +1,7 @@
 dnl  Show tips functions
 dnl
 dnl Define tips location
-define(`TIPS_LOCATION', `"/maps/tips.html"')dnl
+define(`TIPS_LOCATION', `"/maps/tips/index.html"')dnl
 dnl
 dnl Define function for registering menu command
 define(`ADD_TIPS_TO_MENU', `
