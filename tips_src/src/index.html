@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<html data-bs-theme="dark">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +10,7 @@
     <script type="module" src="./js/main.js"></script>
 </head>
 
-<body class="bg-light">
+<body>
     <div class="container py-4 px-3 mx-auto">
         <div class="mt-4 p-5 bg-primary text-white rounded">
             <h1>Tips on using the SUASecLab</h1>
@@ -38,8 +40,14 @@
                 Tobias Tefke
                 &lt;t.tefke@stud.fh-sm.de&gt;</li>
             <li class="list-group-item">You can always find these tips in the settings menu (upper right corner dropdown).</li>
+            <li class="list-group-item">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary btn-lg me-md-2" id="theme-switch">Enable light mode</button>
+                </div>
+            </li>
         </ul>
     </div>
+
 </body>
 
 </html>
