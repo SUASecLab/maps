@@ -44,7 +44,7 @@ MULTI_USER
 
 dnl Generate multi user enter functions
 forloop(`i', `1', `3', `ENTER_LAYER(`multi_user-i', `
-    multiUser("heaven-i");')
+    multiUser("heaven-group-i");')
 ')
 
 dnl Generate multi-user leave functions
